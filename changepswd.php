@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ($_COOKIE['1'] == "В ТЗ не скказанно записывать куки в БД") {
+if (!isset($_COOKIE['1'])) {
     if (!$_SESSION['user']) {
         header('Location: /');
     }
