@@ -13,7 +13,7 @@
                 "id" => $user['id'],
                 "login" => $user['login']
             ];
-            setcookie(1, "В ТЗ не скказанно записывать куки в БД", 0);
+            setcookie(1, "В ТЗ не скказанно записывать куки в БД", time() + 60*60);
             header('Location: ../profile.php');
         } else {
             $_SESSION['message'] = 'Не верный логин или пароль';
