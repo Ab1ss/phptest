@@ -13,7 +13,10 @@ require_once 'connect.php';
         $pwd = $user['password'];
         if (mysqli_num_rows($check_user) > 0 && password_verify($old_password, $pwd)) {
             $hash_new_password = password_hash($new_password, PASSWORD_DEFAULT);
-            mysqli_query($connect, "UPDATE users SET password = '$hash_new_password' WHERE 'login' = '$login'");
+            mysqli_query($connect, "UPDATE users SET password = '$hash_new_password' WHERE login = '$login'");
+
+            $_SESSION['message'] = 'пароль успешно изменен';
+            header('Location: ../index.php');
 
         } else {
             $_SESSION['message'] = 'Старый пароль введен неверно';
