@@ -20,6 +20,7 @@ if (!$_SESSION['user']) {
         <h2 style="margin: 10px 0;"><?= $_SESSION['user']['login'] ?></h2>
         <a href="#"><?= $_SESSION['user']['login'] ?></a>
         <a href="vendor/logout.php" class="logout">Выход</a>
+        <a href="changepswd.php" class="logout">Сменить пароль</a>
     </form>
 
 </body>
