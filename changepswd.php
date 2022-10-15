@@ -1,10 +1,12 @@
 <?php
 session_start();
 
-if (!isset($_COOKIE['1'])) {
+if (isset($_COOKIE['1'])) {
     if (!$_SESSION['user']) {
         header('Location: /');
     }
+}else {
+    header('Location: /');
 }
 ?>
 
