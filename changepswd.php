@@ -33,5 +33,9 @@ if (isset($_COOKIE['1'])) {
         unset($_SESSION['message']);
         ?>
     </form>
+    <form action = "../profile.php">
+        <button type = "submit">Назад</button>
+
+    </form>
 </body>
 </html>
