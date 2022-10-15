@@ -26,16 +26,12 @@ if (isset($_COOKIE['1'])) {
         <label>Введите новый пароль</label>
         <input type="password" name="new_password_confirm" placeholder="Введите новый пароль">
         <button type="submit">Сменить пароль</button>
+        <a href="profile.php" class="back">Сменить пароль</a>
         <?php
         if ($_SESSION['message']) {
             echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
         }
         unset($_SESSION['message']);
         ?>
-    </form>
-    <form action = "../profile.php">
-        <button type = "submit">Назад</button>
-
-    </form>
 </body>
 </html>
