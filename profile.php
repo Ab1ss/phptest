@@ -21,6 +21,12 @@ if (!$_SESSION['user']) {
         <a href="#"><?= $_SESSION['user']['login'] ?></a>
         <a href="vendor/logout.php" class="logout">Выход</a>
         <a href="changepswd.php" class="logout">Сменить пароль</a>
+        <?php
+        if ($_SESSION['message']) {
+            echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+        }
+        unset($_SESSION['message']);
+        ?>
     </form>
 
 </body>

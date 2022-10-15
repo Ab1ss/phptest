@@ -16,7 +16,7 @@ require_once 'connect.php';
             mysqli_query($connect, "UPDATE users SET password = '$hash_new_password' WHERE login = '$login'");
 
             $_SESSION['message'] = 'пароль успешно изменен';
-            header('Location: ../index.php');
+            header('Location: ../profile.php');
 
         } else {
             $_SESSION['message'] = 'Старый пароль введен неверно';
