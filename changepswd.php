@@ -21,6 +21,12 @@ if (!$_SESSION['user']) {
         <label>Введите новый пароль</label>
         <input type="password" name="new_password_confirm" placeholder="Введите новый пароль">
         <button type="submit">Сменить пароль</button>
+        <?php
+        if ($_SESSION['message']) {
+            echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+        }
+        unset($_SESSION['message']);
+        ?>
     </form>
 </body>
 </html>
